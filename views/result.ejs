@@ -1,0 +1,76 @@
+<%- include('temp/header') -%>
+
+    <form action="/result">
+        
+         <!--<div class="form-group row" id="keyword">-->
+         <!--       <label for="keyword" class="col-sm-1 col-form-label">Keyword:</label>-->
+                
+                
+         <!--       <div id = "keyword">-->
+         <!--           <input type="text" class="form-control" id="key" required>-->
+         <!--       </div>-->
+                
+         <!--</div>-->
+            
+         <!--    <div class="form-group row" class="align-middle" >-->
+                    
+        	<!--			<label for="orientation" class="text-right" class="col-sm-1 col-form-label">Orientation:</label>-->
+        				
+        				
+        	<!--			<div class="col-sm-1.8">-->
+        					
+         <!--                <div><select id="orientation"  name="orientation">-->
+         <!--                     <option value="">Select One</option>-->
+         <!--                     <option value="horizontal"> Horizontal</option>-->
+         <!--                     <option value="vertical"> Vertical</option>-->
+         <!--                </select><br />-->
+                        
+                        
+        	<!--			</div>-->
+        				
+        	<!--			</div>-->
+        				
+        	<!--			<div class="col-sm-0">-->
+        	<!--			    <button type="submit" class="btn btn-primary">Search</button>-->
+        	<!--			</div>-->
+        				
+         <!--   </div>-->
+        
+        Keyword:
+        <input type="text" name="keyword">
+        <br>
+        Orientation:
+        <select id="orientation" name="orientation">
+            <option value=""> </option>
+            <option value="vertical"> Vertical </option>
+            <option value="horizontal"> Horizontal </option>
+        </select>
+        
+        <button type="submit" class="btn btn-primary"> Search! </button>
+        <br>
+        
+    </form><br>
+    
+    <%let random1 = Math.floor(Math.random() * 20);%>
+    <%let random2 = Math.floor(Math.random() * 20);%>
+    <%let random3 = Math.floor(Math.random() * 20);%>
+    <%let random4 = Math.floor(Math.random() * 20);%>
+    
+    
+    <div class="row justify-content-center">
+        <span><%=images.hits[random1].likes%></span><br><br>
+        <img src='<%=images.hits[random1].largeImageURL %>' width='200'>
+        <span><%=images.hits[random2].likes%></span><br><br>
+        <img src='<%=images.hits[random2].largeImageURL %>' width='200'>
+        <span><%=images.hits[random3].likes%></span><br><br>
+        <img src='<%=images.hits[random3].largeImageURL %>' width='200'>
+        <span><%=images.hits[random4].likes%></span><br><br>
+        <img src='<%=images.hits[random4].largeImageURL %>' width='200'>
+        
+    </div>
+    
+    <script>
+        let or = $("orientation").val():
+    </script>
+    
+<%- include('temp/footer') -%> 

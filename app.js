@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const request = require('request');
 var jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const { window } = new JSDOM();
@@ -26,8 +27,12 @@ app.get("/", async function(req, res){
 
 
 app.get("/result", async function(req, res){
-    let orientation = req.query.orientation;
-    let key = req.query.key;
+    let key = req.query.keyword;
+    let orientation = req.query.or;
+    
+    console.log(key);
+    console.log(orientation);
+    
     
     let data = await image(key, orientation);
     
@@ -36,10 +41,10 @@ app.get("/result", async function(req, res){
 
 
 
-const request = require('request');
-function image(word, orientation){
+
+function image(keyword, orientation){
     return new Promise(function(resolve, reject){
-        request(api + word+ "&orientation=" + orientation, 
+        request("https://pixabay.com/api/?key=15449339-62ac8a9f7afcca4e5d396f0b1&q=" + keyword + "&orientation=" + orientation, 
                     function(error, response, body){ 
                         if(!error && response.statusCode == 200){ //200 means request succeeded
                             let data = JSON.parse(body);

@@ -2,39 +2,52 @@
 
     <form action="/result" method="GET">
         
-         <div class="form-group row" id="keyword">
-                <label for="keyword" class="col-sm-1 col-form-label">Keyword:</label>
+         <!--<div class="form-group row" id="keyword">-->
+         <!--       <label for="keyword" class="col-sm-1 col-form-label">Keyword:</label>-->
                 
                 
-                <div id = "keyword">
-                    <input type="text" class="form-control" id="key" required>
-                </div>
+         <!--       <div id = "keyword">-->
+         <!--           <input type="text" class="form-control" name="keyword" required>-->
+         <!--       </div>-->
                 
-         </div>
+         <!--</div>-->
             
-             <div class="form-group row" class="align-middle" >
+         <!--    <div class="form-group row" class="align-middle" >-->
                     
-        				<label for="orientation" class="text-right" class="col-sm-1 col-form-label">Orientation:</label>
+        	<!--			<label for="orientation" class="text-right" class="col-sm-1 col-form-label">Orientation:</label>-->
         				
         				
-        				<div class="col-sm-1.8">
+        	<!--			<div class="col-sm-1.8">-->
         					
-                         <div><select id="state"  name="state">
-                              <option value="">Select One</option>
-                              <option value="horizontal"> Horizontal</option>
-                              <option value="vertical"> Vertical</option>
-                         </select><br />
+         <!--                <div><select id="orientation"  name="orientation">-->
+         <!--                     <option value="">Select One</option>-->
+         <!--                     <option value="horizontal"> Horizontal</option>-->
+         <!--                     <option value="vertical"> Vertical</option>-->
+         <!--                </select><br />-->
                         
                         
-        				</div>
+        	<!--			</div>-->
         				
-        				</div>
+        	<!--			</div>-->
         				
-        				<div class="col-sm-0">
-        				    <button type="submit" class="btn btn-primary">Search</button>
-        				</div>
+        	<!--			<div class="col-sm-0">-->
+        	<!--			    <button type="submit" class="btn btn-primary">Search</button>-->
+        	<!--			</div>-->
         				
-            </div>
+         <!--   </div>-->
+         
+         Keyword:
+        <input type="text" name="keyword">
+        <br>
+        Orientation:
+        <select id="orientation" name="orientation">
+            <option value=""> Select one </option>
+            <option value="vertical"> Vertical </option>
+            <option value="horizontal"> Horizontal </option>
+        </select>
+        
+        <button class="btn btn-primary"> Search! </button>
+        <br>
         
     </form><br>
     
