@@ -58,9 +58,13 @@ function image(word, orientation){
 }
 
 
+app.get("*", function(req,res){
+    res.send("Page not found");
+    res.render("error");
+});
 
 
 //server listener
-app.listen(process.env.PORT, function(){
+app.listen("8080", "127.0.0.1", function(){
     console.log("Running Express Server...");
 });
