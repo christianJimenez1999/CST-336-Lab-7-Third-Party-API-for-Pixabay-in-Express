@@ -70,6 +70,6 @@ app.get("*", function(req,res){
 
 
 //server listener
-app.listen("8080", "127.0.0.1", function(){
+app.listen(process.env.PORT, function(){
     console.log("Running Express Server...");
 });
