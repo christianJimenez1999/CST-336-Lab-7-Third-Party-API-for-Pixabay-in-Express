@@ -70,6 +70,6 @@ app.get("*", function(req,res){
 
 
 //server listener
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Running Express Server...");
 });
